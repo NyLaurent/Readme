@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Rubik+Burned&family=Single+Day&family=Ubuntu:wght@300;400&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Oswald", sans-serif;
+  font-family: "Rubik Burned", system-ui;
+  font-family: "Single Day", cursive;
+  font-family: "Ubuntu", sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: rgb(50, 104, 168);
+}
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .box {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-box-reflect: below 150px
+    linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.2));
+}
+.container .box::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  border: 2px solid;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  filter: url(#wavy);
+  background: #fff;
+}
+
+.container .box::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  border: 2px solid;
+  width: 50%;
+  filter: url(#wavy);
+  height: 100%;
+  border-right: none;
+  background: rgba(255, 255, 255, 0.04);
+  color: #fff;
+}
+.container .box:hover:before {
+  background: transparent;
+  transition: 0.5s;
+}
+
+.content {
+  position: absolute;
+  padding: 20px;
+  text-align: center;
+  transition: 0.5s;
+}
+.content h2 {
+  padding: 30px;
+  font-size: 38px;
+}
